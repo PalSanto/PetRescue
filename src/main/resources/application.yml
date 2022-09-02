@@ -1,0 +1,16 @@
+spring:
+#数据库
+
+  datasource:
+    password: Wd147258369
+    username: root
+    url: jdbc:mysql://1.117.170.149:3306/pet_rescue?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#数据库建表语句
+
+  sql:
+    init:
+      schema-locations: classpath:/sql/Administrator.sql, classpath:/sql/Users.sql
+      mode: never
+

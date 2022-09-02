@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demxntia.Petrescue.PetRescueMapper">
+    <select id="selectUserById" resultType="User" parameterType="int">
+        SELECT * from u where id = #{id}
+    </select>
+    <select id="selectUserByName" resultType="User" parameterType="String">
+        SELECT * from u where NAME = #{NAME}
+    </select>
+    <insert id="insertUsers" parameterType="Users">
+        insert into  u(username,email,password,Phone) values(#{name},#{email},#{password},#{Phone})
+    </insert>
+</mapper>
